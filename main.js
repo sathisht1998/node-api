@@ -1,11 +1,14 @@
-const express = require('express')
-const app = express()
-//get routes
-app.get('/',(req,res)=>{
-    res.send('hello Node ApI')
-})
+const app = require('express')();
+const port = 8080;
 
-//listen to port
-app.listen(3000, () => {
-    console.log('node api is running')
-})
+app.get('/tshirt',(req,res) =>{
+    res.status(200).send({
+        tshirt: 'red ',
+        size:'large'
+
+    })
+
+});
+
+
+
